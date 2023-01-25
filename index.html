@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+    
     <title>KAIZEN TECH</title>
   </head>
   <body>
@@ -37,17 +47,56 @@
       </div>
       <nav class="desktop-main-menu">
         <ul>
-          <li><a href="falcon9.html">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="dragon.html">SERVICES</a></li>
-          <li><a href="#">TESTIMONIALS</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#testimonial">TESTIMONIALS</a></li>
+          <li><a href="#contactus">CONTACT US</a></li>
           <!-- <li><a href="#">Rideshare</a></li>
           <li><a href="#">Starlink</a></li>
           <li><a href="#">Shop</a></li> -->
         </ul>
       </nav>
     </header>
+
+    <style>
+
+.accordion {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.active, .accordion:hover {
+  background-color: rgb(0, 0, 0); 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+    </style>
 
     <!-- Hamburger Menu -->
     <button id="menu-btn" class="hamburger" type="button">
@@ -57,7 +106,7 @@
     </button>
 
     <!-- Section A -->
-    <section class="section-a">
+    <section class="section-a" id="home">
       <div class="section-inner">
         <h4>In The Making Of</h4>
         <h2>KAIZEN TECHNOLOGY</h2>
@@ -81,19 +130,12 @@
       </div>
     </section>
 
-    <!-- Section B -->
-    <section class="section-b">
+<!-- Section A -->
+    <section class="section-a" id="about">
       <div class="section-inner">
-        <h4>THE FIRST IN GHANA</h4>
-        <h2>MISSION</h2>
-        <h5> "Our mission is to provide cost-effective and reliable IT 
-          outsourcing and managed services that help businesses to focus on 
-          their core competencies and achieve their goals." </h5>
-
-        <h2> VISION </h2>
-        <h5> "Our vision is to be the leading provider of IT outsourcing 
-          and managed services in Africa by empowering businesses of all 
-          sizes to thrive in the digital age." </h5>
+        
+        <h2>ABOUT US</h2>
+        <h5>At Kaizen Tech Company, we have been providing custom IT solutions for businesses for over 3 years. We focus on providing the most cost-effective and reliable IT solutions that are tailored to fit the unique needs and requirements of each individual customer. We work hard to ensure that our clients receive the highest levels of customer service and satisfaction. We strive to stay up to date on the latest technologies and trends in the IT industry to provide our clients with the best solutions available. We take pride in our commitment to excellence, offering a wide range of IT solutions and services to our clients. Our dedication to customer satisfaction is unmatched, and we strive to be a partner that you can trust.</h5>
         <!-- <a href="#" class="btn">
           <div class="hover"></div>
           <span>Rewatch</span>
@@ -112,15 +154,20 @@
       </div>
     </section>
 
-    <!-- Section C -->
-    <section class="section-c">
+
+    <!-- Section B -->
+    <section class="section-b">
       <div class="section-inner">
-        <h4>Recent Mission</h4>
-        <h2>SES-22 Mission</h2>
-        <a href="#" class="btn">
+        <h2>MISSION</h2>
+        <h5> Our mission is to provide cost-effective and reliable IT outsourcing and managed services that help businesses to focus on their core competencies and achieve their goals. </h5>
+
+        <h2> VISION </h2>
+        <h5>Our vision is to be the leading provider of IT outsourcing and managed services in Africa by empowering businesses of all sizes to thrive in the digital age.
+ </h5>
+        <!-- <a href="#" class="btn">
           <div class="hover"></div>
           <span>Rewatch</span>
-        </a>
+        </a> -->
       </div>
 
       <div class="scroll-arrow">
@@ -135,39 +182,142 @@
       </div>
     </section>
 
-    <!-- Section D -->
-    <section class="section-d">
-      <div class="section-inner">
-        <h4>Recent Launch</h4>
-        <h2>Globalstar FM15 Mission</h2>
-        <a href="#" class="btn">
-          <div class="hover"></div>
-          <span>Rewatch</span>
-        </a>
-      </div>
 
-      <div class="scroll-arrow">
-        <svg width="30px" height="20px">
-          <path
-            stroke="#ffffff"
-            fill="none"
-            stroke-width="2px"
-            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
-          ></path>
-        </svg>
-      </div>
-    </section>
+<style>
+  .row {
+    height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, black 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: black;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: black;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: black;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+</style>
+
+    
 
     <!-- Section E -->
-    <section class="section-e">
-      <div class="section-inner">
-        <h2>Starship Update</h2>
-        <a href="#" class="btn">
-          <div class="hover"></div>
-          <span>Rewatch</span>
-        </a>
-      </div>
+    <section class="section-e" id="services">
+      <!-- <div class="section-inner"> -->
+        <!-- <h2></h2> -->
+        
+          <div class="section-inner float-child">
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <div class="icon-wrapper">
+                    <i class="fas fa-hammer"></i>
+                  </div>
+                  <h3>Technology Consulting
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                    consequatur necessitatibus eaque.
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="icon-wrapper">
+                    <i class="fas fa-brush"></i>
+                  </div>
+                  <h3>Cyber Security</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                    consequatur necessitatibus eaque.
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="icon-wrapper">
+                    <i class="fas fa-wrench"></i>
+                  </div>
+                  <h3>Cloud Services</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                    consequatur necessitatibus eaque.
+                  </p>
+                </div>
+              </div>
+            
+              </div>
+          </div>
+          <div style="margin-left: 600px" class="section-inner">
+            <h2>Our Servicess</h2>
+            </div>
 
+          
       <div class="scroll-arrow">
         <svg width="30px" height="20px">
           <path
@@ -181,16 +331,127 @@
     </section>
 
     <!-- Section F -->
-    <section class="section-f">
-      <div class="section-inner">
-        <h2>Starship to add NASA astronauts on the moon</h2>
-        <a href="#" class="btn">
+<style>
+  
+
+.float-child {
+    width: 50%;
+    float: left;
+    /* padding: 20px; */
+    /* border: 2px solid red; */
+}  
+ /* Style inputs with type="text", select elements and textareas */
+ input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #b0c72d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #b0c72d;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+} 
+</style>
+    
+    <section class="section-f" id="testimonials">
+      <div class="section-inner float-child">
+        <button  class="accordion" >Ella Kazambizi - ALU Facilitator </button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <button  class="accordion" >Ella Kazambizi - ALU Facilitator </button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <button  class="accordion" >Ella Kazambizi - ALU Facilitator </button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <button  class="accordion" >Ella Kazambizi - ALU Facilitator </button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <button  class="accordion" >Ella Kazambizi - ALU Facilitator </button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        
+      </div>
+      <div style="margin-left: 600px" class="section-inner">
+        <h2>TESTIMONIALS</h2>
+        <!-- <a href="#" class="btn">
           <div class="hover"></div>
           <span>Rewatch</span>
-        </a>
+        </a> -->
       </div>
     </section>
 
+    <!-- Section D -->
+    <section class="section-d" id="contactus">
+      <div class="section-inner">
+        <h4>Contact Us</h4>
+      </div>
+      
+      <div style="margin-left: 600px;" class="section-inner">
+        <form action="#">
+
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:50px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+
+    
     <footer>
       <ul>
         <li>Kaizen Tech &copy; 2023</li>
@@ -202,3 +463,20 @@
     </footer>
   </body>
 </html>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
