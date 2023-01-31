@@ -20,7 +20,101 @@ a {
 }
 
 ul {
+<<<<<<< Updated upstream
   list-style: none;
+=======
+    list-style: none;
+}
+
+
+/* Testimonial Page */
+
+::selection {
+    background: rgba(23,162,184,0.3);
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: unset;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: initial;
+    justify-content: space-between;
+}
+
+    .wrapper .box {
+        background: #fff;
+        width: calc(33% - 10px);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    }
+
+        .wrapper .box i.quote {
+            font-size: 20px;
+            color: #b3a500;
+        }
+
+        .wrapper .box .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: self-start;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+
+.box .info .name {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.box .info .job {
+    font-size: 16px;
+    font-weight: 500;
+    color: #b3a500;
+}
+
+.box .info .stars {
+    margin-top: 2px;
+}
+
+.box .info .stars i {
+    color: #b3a500;
+    }
+
+.box .content .image {
+    height: 65px;
+    width: 65px;
+    padding: 3px;
+    background: #b3a500;
+    border-radius: 50%;
+}
+
+.content .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.box:hover .content .image img {
+    border-color: #000000;
+}
+
+@media (max-width: 1045px) {
+    .wrapper .box {
+        width: calc(50% - 10px);
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 702px) {
+    .wrapper .box {
+        width: 100%;
+    }
+>>>>>>> Stashed changes
 }
 
 /* Header/Navbar */
@@ -114,14 +208,166 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   animation: fadeInUp 0.5s ease-in-out 0.2s;
-  animation-fill-mode: both; // Stop from showing at start
+  animation-fill-mode: both; /* Stop from showing at start */
 }
 
 .section-inner a {
   animation: fadeInUp 0.5s ease-in-out 0.4s;
-  animation-fill-mode: both; // Stop from showing at start
+  animation-fill-mode: both; /* Stop from showing at start */
 }
 
+/* JUST HEADERS */
+
+h2 {
+    padding: 10px;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease-in-out 0.2s;
+    animation-fill-mode: both; /* Stop from showing at start */
+}
+
+<<<<<<< Updated upstream
+=======
+/* Sectin-E For Services */
+
+.row {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+
+.card {
+    width: 90%;
+    height: 120%;
+    padding: 10px;
+    background: linear-gradient(#ffffff 50%, black 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+}
+
+p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+
+.icon-wrapper {
+    background-color: black;
+    position: sticky;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    background-position: 0 100%;
+}
+
+    .card:hover .icon-wrapper {
+        background-color: #ffffff;
+        color: black;
+    }
+
+    .card:hover h3 {
+        color: #ffffff;
+    }
+
+    .card:hover p {
+        color: #f0f0f0;
+    }
+
+@media screen and (min-width: 768px) {
+    section {
+        padding: 0 2em;
+    }
+
+    .column {
+        flex: 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        padding: 1em 3em;
+    }
+
+    .column {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+
+/* Contact Us Page */
+
+.float-child {
+    width: auto;
+    float: right;
+    /* padding: 100px; */
+    /* border: 2px solid red; */
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #b0c72d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+        background-color: #b0c72d;
+    }
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 50px;
+} 
+
+
+>>>>>>> Stashed changes
 /* Background images */
 .section-a {
   background-image: url('../img/back2.jpg');
